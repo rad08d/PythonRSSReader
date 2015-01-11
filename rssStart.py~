@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+import sys
+import os
+from RssClass import Rss
+
+try:
+    dirName = os.path.dirname(__file__)
+    path = dirName + "/rssWebSites.txt"
+    file = open(path)
+    sites = file.readlines()
+    siteStories = []
+    for site in sites:
+        rss = Rss(site)
+        rss.get_rss_into_articles()
+	siteStories.append(rss)
+except IOError: 
+    print "Can't find website list file. Error: " , sys.exc_info()[1]
+
+for collArticles in siteStories:
+    print collArticles.url, "\n"
+    for article in collArticles.articles:
+        print article.title, "\n"

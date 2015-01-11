@@ -1,0 +1,7 @@
+class Article:
+    """A class for handling the details of an article"""
+    def __init__(self, title,link,descr,pubDate):
+        self.title = title
+        self.link = link
+        self.descr = descr
+        self.pubDate = pubDate
