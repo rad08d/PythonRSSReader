@@ -12,17 +12,21 @@ class Base:
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
 	self.window.set_position(gtk.WIN_POS_CENTER)
 	self.window.set_title("Rss Reader")
-        self.window.set_default_size(800,500)
+        self.window.set_default_size(1000,500)
+        self.swindow = gtk.ScrolledWindow()
+        self.vbox = gtk.VBox()
         self.dirName = os.path.dirname(__file__)
         path = self.dirName + "/images/rssReader.jpg"
         self.tree = self.display_data()
 	self.window.set_icon_from_file(path)
-        self.window.add(self.tree)
+        self.swindow.add(self.tree)
+        self.vbox.add(self.swindow)
+        self.window.add(self.vbox)
 	self.window.show_all()
 	self.window.connect("destroy", self.destroy)
 
     def display_data(self):
-        store = gtk.ListStore(str, str, str)
+        store = gtk.ListStore(str, str)
         try:
             path = self.dirName + "/rssWebSites.txt"
             file = open(path)
@@ -35,14 +39,12 @@ class Base:
             try:
                 for collArticles in siteStories:
                     for article in collArticles.articles:
-                        store.append([article.title, article.descr, article.pubDate]) 
+                        store.append([article.title, article.pubDate]) 
                 tree = gtk.TreeView(store)
                 renderer = gtk.CellRendererText()
                 columnT = gtk.TreeViewColumn("Title", renderer, text=0)
                 tree.append_column(columnT)
-                columnDescr = gtk.TreeViewColumn("Description", renderer, text=4)
-                tree.append_column(columnDescr)
-                columnPubDate = gtk.TreeViewColumn("PubDate", renderer, text=2)
+                columnPubDate = gtk.TreeViewColumn("PubDate", renderer, text=1)
                 tree.append_column(columnPubDate)
                 return tree 
             except:
