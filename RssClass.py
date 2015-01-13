@@ -44,20 +44,23 @@ class Article:
         self.link = link
         self.descr = descr
         self.pubDate = pubDate
-        self.full_txt = ""
+        self.full_txt = ''
 
     def get_full_txt(self):
-        response = urllib2.urlopen(self.link).read().decode('utf-8')
-        parser = RssHTMLParser()
-        parser.feed(response)
-        self.full_txt = parser.data
+        try:
+            response = urllib2.urlopen(self.link).read().decode('utf-8')
+            parser = RssHTMLParser()
+            parser.feed(response)
+            self.full_txt = parser.data
+        except:
+            print "Error in get_full_txt() of RssClass.Article", sys.exc_info()[1]
 
 class RssHTMLParser(HTMLParser.HTMLParser):
     def __init__(self):
         HTMLParser.HTMLParser.__init__(self)
         self.is_start_p = False
         self.is_end_p = False
-        self.data = []
+        self.data = ""
     def handle_starttag(self, tag, attrs):
         if tag == 'p':
             self.is_start_p = True
@@ -69,9 +72,14 @@ class RssHTMLParser(HTMLParser.HTMLParser):
     def handle_endtag(self, tag):
         if tag == 'p':
             self.is_start_p = False
+            self.is_end_p = True
         elif tag == 'a' and self.is_start_p:
-            self.is_start_p = True 
+            self.is_start_p = True
+        else:
+            self.is_end_p = False 
 
     def handle_data(self, data):
         if self.is_start_p:
-            self.data.append(data)
+            self.data += data
+        elif self.is_end_p:
+            self.data += ' '
