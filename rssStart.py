@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import sys
 import os
+import threading
 from RssClass import Rss
 
 try:
@@ -8,6 +9,7 @@ try:
     path = dirName + "/rssWebSites.txt"
     file = open(path)
     sites = file.readlines()
+    print len(sites)
     siteStories = []
     for site in sites:
         rss = Rss(site)

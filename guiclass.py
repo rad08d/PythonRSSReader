@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import gobject
 import os
+from multiprocessing import Process
 import pygtk
 pygtk.require('2.0')
 import gtk
@@ -12,7 +13,7 @@ class Base:
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
 	self.window.set_position(gtk.WIN_POS_CENTER)
 	self.window.set_title("Rss Reader")
-        self.window.set_default_size(1500,1000)
+        self.window.set_default_size(gtk.gdk.screen_width(),gtk.gdk.screen_height())
         self.swindow = gtk.ScrolledWindow()
         self.vbox = gtk.VBox()
         self.dirName = os.path.dirname(__file__)
@@ -29,14 +30,22 @@ class Base:
     
     def on_selection(self, tree_selection):
         (model, path) = tree_selection.get_selected()
-        print path
         article = model.get_value(path, 2)
         article.get_full_txt()
+        article.get_photos()
+        article_img = gtk.Image()
+        article_img.set_pixel_size(100)
+        if len(article.pics) >= 1:
+            loader = gtk.gdk.PixbufLoader()
+            loader.write(article.pics[0])
+            loader.close()
+            article_img.set_from_pixbuf(loader.get_pixbuf())
         article_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-        article_window.set_position(gtk.WIN_POS_MOUSE)
-        article_window.set_title(article.title)
-        article_window.set_default_size(1000,500)
+        article_window.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
+        article_window.set_title("Rss Reader: " + article.title)
+        article_window.set_default_size(gtk.gdk.screen_width(),gtk.gdk.screen_height())
         article_swindow = gtk.ScrolledWindow()
+        article_vbox = gtk.VBox(False)
         article_buf = gtk.TextBuffer()
         article_buf.set_text(article.full_txt)
         article_txt_view = gtk.TextView(article_buf)
@@ -49,7 +58,9 @@ class Base:
         article_txt_view.set_pixels_above_lines(20)
         article_txt_view.set_pixels_below_lines(20)
         article_swindow.add(article_txt_view)
-        article_window.add(article_swindow)
+        article_vbox.add(article_img)
+        article_vbox.add(article_swindow)
+        article_window.add(article_vbox)
         article_window.show_all()
             
 
@@ -61,9 +72,12 @@ class Base:
             sites = file.readlines()
             siteStories = []
             for site in sites:
-                rss = Rss(site)
-                rss.get_rss_into_articles()
-	        siteStories.append(rss)
+                try:
+                    rss = Rss(site)
+                    rss.get_rss_into_articles()
+	            siteStories.append(rss)
+                except:
+                    print "Error in guiclass.display_data(). Error: ", sys.exc_info()[1]
             try:
                 for collArticles in siteStories:
                     for article in collArticles.articles:
