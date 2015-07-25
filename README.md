@@ -2,7 +2,7 @@
 Python based RSS reader
 To run this program via linux (possibly OSX), do the following in a terminal:
 
-1) cd {replace brackets and sentance with path to folder where project is downloaded}
+1) cd {replace brackets and sentence with path to folder where project is downloaded}
 2) source ./run.sh
 3) enjoy
 
