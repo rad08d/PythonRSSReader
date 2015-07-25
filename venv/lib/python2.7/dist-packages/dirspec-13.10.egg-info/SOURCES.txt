@@ -1,0 +1,16 @@
+COPYING
+COPYING.LESSER
+MANIFEST.in
+run-tests
+setup.cfg
+setup.py
+dirspec/__init__.py
+dirspec/basedir.py
+dirspec/utils.py
+dirspec.egg-info/PKG-INFO
+dirspec.egg-info/SOURCES.txt
+dirspec.egg-info/dependency_links.txt
+dirspec.egg-info/top_level.txt
+dirspec/tests/__init__.py
+dirspec/tests/test_basedir.py
+dirspec/tests/test_utils.py

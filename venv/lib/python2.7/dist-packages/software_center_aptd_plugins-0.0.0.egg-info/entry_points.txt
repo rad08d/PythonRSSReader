@@ -1,0 +1,3 @@
+[aptdaemon.plugins]
+get_license_key=softwarecenter_aptd_plugins.add_license_key_plugin:get_license_key
+                   

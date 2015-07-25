@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: duplicity
+Version: 0.6.23
+Summary: Encrypted backup using rsync algorithm
+Home-page: http://duplicity.nongnu.org/index.html
+Author: Kenneth Loafman <kenneth@loafman.com>
+Author-email: kenneth@loafman.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

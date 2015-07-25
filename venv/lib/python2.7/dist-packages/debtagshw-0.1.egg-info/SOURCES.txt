@@ -1,0 +1,13 @@
+README
+setup.py
+debtagshw/__init__.py
+debtagshw/debtagshw.py
+debtagshw/detectors.py
+debtagshw/enums.py
+debtagshw/opengl.py
+debtagshw.egg-info/PKG-INFO
+debtagshw.egg-info/SOURCES.txt
+debtagshw.egg-info/dependency_links.txt
+debtagshw.egg-info/top_level.txt
+test/test_hw.py
+test/test_pyflakes.py

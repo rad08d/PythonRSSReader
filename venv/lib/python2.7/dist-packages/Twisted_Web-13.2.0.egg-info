@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: Twisted Web
+Version: 13.2.0
+Summary: Twisted web server, programmable in Python.
+Home-page: http://twistedmatrix.com/trac/wiki/TwistedWeb
+Author: James Knight
+Author-email: twisted-python@twistedmatrix.com
+License: MIT
+Description: Twisted Web is a complete web server, aimed at hosting web
+        applications using Twisted and Python, but fully able to serve static
+        pages, also.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

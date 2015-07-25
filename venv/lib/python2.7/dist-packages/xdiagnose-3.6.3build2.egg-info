@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: xdiagnose
+Version: 3.6.3build2
+Summary: Analysis tools for troubleshooting X.org problems
+Home-page: http://launchpad.net/xdiagnose
+Author: Bryce Harrington
+Author-email: bryce@canonical.com
+License: http://www.gnu.org/copyleft/gpl.html
+Description: 
+        This package is a friendly GUI application for diagnosing several
+        common X.org problems.
+        
+Platform: any
+Requires: gobject
+Requires: pygtk
+Provides: xdiagnose

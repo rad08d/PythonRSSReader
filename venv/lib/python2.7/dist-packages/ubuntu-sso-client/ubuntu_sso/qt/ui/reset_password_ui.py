@@ -1,0 +1,155 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'data/qt/reset_password.ui'
+#
+# Created: Sat Apr  5 11:38:08 2014
+#      by: PyQt4 UI code generator 4.10.4
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_ResetPasswordPage(object):
+    def setupUi(self, ResetPasswordPage):
+        ResetPasswordPage.setObjectName(_fromUtf8("ResetPasswordPage"))
+        ResetPasswordPage.resize(505, 260)
+        ResetPasswordPage.setWindowTitle(_fromUtf8(""))
+        self.verticalLayout_4 = QtGui.QVBoxLayout(ResetPasswordPage)
+        self.verticalLayout_4.setSpacing(15)
+        self.verticalLayout_4.setMargin(0)
+        self.verticalLayout_4.setObjectName(_fromUtf8("verticalLayout_4"))
+        self.gridLayout = QtGui.QGridLayout()
+        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
+        self.verticalLayout = QtGui.QVBoxLayout()
+        self.verticalLayout.setSpacing(3)
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.reset_code = QtGui.QLabel(ResetPasswordPage)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.reset_code.sizePolicy().hasHeightForWidth())
+        self.reset_code.setSizePolicy(sizePolicy)
+        self.reset_code.setMinimumSize(QtCore.QSize(310, 0))
+        self.reset_code.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.reset_code.setFont(font)
+        self.reset_code.setText(_fromUtf8("reset_code"))
+        self.reset_code.setObjectName(_fromUtf8("reset_code"))
+        self.verticalLayout.addWidget(self.reset_code)
+        self.reset_code_line_edit = QtGui.QLineEdit(ResetPasswordPage)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.reset_code_line_edit.sizePolicy().hasHeightForWidth())
+        self.reset_code_line_edit.setSizePolicy(sizePolicy)
+        self.reset_code_line_edit.setMinimumSize(QtCore.QSize(300, 0))
+        self.reset_code_line_edit.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.reset_code_line_edit.setObjectName(_fromUtf8("reset_code_line_edit"))
+        self.verticalLayout.addWidget(self.reset_code_line_edit)
+        self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
+        self.verticalLayout_2 = QtGui.QVBoxLayout()
+        self.verticalLayout_2.setSpacing(3)
+        self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
+        self.password_label = QtGui.QLabel(ResetPasswordPage)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.password_label.sizePolicy().hasHeightForWidth())
+        self.password_label.setSizePolicy(sizePolicy)
+        self.password_label.setMinimumSize(QtCore.QSize(310, 0))
+        self.password_label.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.password_label.setFont(font)
+        self.password_label.setText(_fromUtf8("password_label"))
+        self.password_label.setObjectName(_fromUtf8("password_label"))
+        self.verticalLayout_2.addWidget(self.password_label)
+        self.password_line_edit = QtGui.QLineEdit(ResetPasswordPage)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.password_line_edit.sizePolicy().hasHeightForWidth())
+        self.password_line_edit.setSizePolicy(sizePolicy)
+        self.password_line_edit.setMinimumSize(QtCore.QSize(300, 0))
+        self.password_line_edit.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.password_line_edit.setEchoMode(QtGui.QLineEdit.Password)
+        self.password_line_edit.setObjectName(_fromUtf8("password_line_edit"))
+        self.verticalLayout_2.addWidget(self.password_line_edit)
+        self.gridLayout.addLayout(self.verticalLayout_2, 1, 0, 1, 1)
+        self.verticalLayout_3 = QtGui.QVBoxLayout()
+        self.verticalLayout_3.setSpacing(3)
+        self.verticalLayout_3.setObjectName(_fromUtf8("verticalLayout_3"))
+        self.confirm_password_label = QtGui.QLabel(ResetPasswordPage)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.confirm_password_label.sizePolicy().hasHeightForWidth())
+        self.confirm_password_label.setSizePolicy(sizePolicy)
+        self.confirm_password_label.setMinimumSize(QtCore.QSize(310, 0))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.confirm_password_label.setFont(font)
+        self.confirm_password_label.setText(_fromUtf8("confirm_password_label"))
+        self.confirm_password_label.setObjectName(_fromUtf8("confirm_password_label"))
+        self.verticalLayout_3.addWidget(self.confirm_password_label)
+        self.confirm_password_line_edit = QtGui.QLineEdit(ResetPasswordPage)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.confirm_password_line_edit.sizePolicy().hasHeightForWidth())
+        self.confirm_password_line_edit.setSizePolicy(sizePolicy)
+        self.confirm_password_line_edit.setMinimumSize(QtCore.QSize(300, 0))
+        self.confirm_password_line_edit.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.confirm_password_line_edit.setEchoMode(QtGui.QLineEdit.Password)
+        self.confirm_password_line_edit.setObjectName(_fromUtf8("confirm_password_line_edit"))
+        self.verticalLayout_3.addWidget(self.confirm_password_line_edit)
+        self.gridLayout.addLayout(self.verticalLayout_3, 2, 0, 1, 1)
+        self.password_assistance = QtGui.QLabel(ResetPasswordPage)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.password_assistance.sizePolicy().hasHeightForWidth())
+        self.password_assistance.setSizePolicy(sizePolicy)
+        self.password_assistance.setMinimumSize(QtCore.QSize(185, 95))
+        self.password_assistance.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.password_assistance.setText(_fromUtf8("password_assistance"))
+        self.password_assistance.setWordWrap(True)
+        self.password_assistance.setIndent(20)
+        self.password_assistance.setObjectName(_fromUtf8("password_assistance"))
+        self.gridLayout.addWidget(self.password_assistance, 1, 1, 2, 1)
+        self.verticalLayout_4.addLayout(self.gridLayout)
+        self.horizontalLayout_3 = QtGui.QHBoxLayout()
+        self.horizontalLayout_3.setContentsMargins(-1, -1, 0, -1)
+        self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
+        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem)
+        self.reset_password_button = QtGui.QPushButton(ResetPasswordPage)
+        self.reset_password_button.setEnabled(False)
+        self.reset_password_button.setText(_fromUtf8(""))
+        self.reset_password_button.setObjectName(_fromUtf8("reset_password_button"))
+        self.horizontalLayout_3.addWidget(self.reset_password_button)
+        self.verticalLayout_4.addLayout(self.horizontalLayout_3)
+        spacerItem1 = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem1)
+
+        self.retranslateUi(ResetPasswordPage)
+        QtCore.QMetaObject.connectSlotsByName(ResetPasswordPage)
+
+    def retranslateUi(self, ResetPasswordPage):
+        pass
+

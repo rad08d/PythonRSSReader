@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: pexpect
+Version: 3.1
+Summary: Pexpect allows easy control of interactive console applications.
+Home-page: http://pexpect.readthedocs.org/
+Author: Noah Spurrier; Thomas Kluyver; Jeff Quast
+Author-email: noah@noah.org; thomas@kluyver.me.uk; contact@jeffquast.com
+License: ISC license
+Description: UNKNOWN
+Platform: UNIX
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: System
+Classifier: Topic :: System :: Archiving :: Packaging
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Shells
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: Terminals

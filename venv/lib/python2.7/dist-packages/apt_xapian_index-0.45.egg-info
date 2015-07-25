@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: apt-xapian-index
+Version: 0.45
+Summary: Xapian index of Debian packages
+Home-page: http://www.enricozini.org/sw/apt-xapian-index/
+Author: ['Enrico Zini']
+Author-email: ['enrico@debian.org']
+License: GPL
+Description: UNKNOWN
+Platform: any

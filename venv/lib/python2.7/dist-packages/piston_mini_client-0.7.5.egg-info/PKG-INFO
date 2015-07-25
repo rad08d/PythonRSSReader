@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: piston-mini-client
+Version: 0.7.5
+Summary: A package to consume Django-Piston web services
+Home-page: https://launchpad.net/piston-mini-client
+Author: Anthony Lenton
+Author-email: anthony.lenton@canonical.com
+License: LGPLv3
+Description: UNKNOWN
+Platform: UNKNOWN

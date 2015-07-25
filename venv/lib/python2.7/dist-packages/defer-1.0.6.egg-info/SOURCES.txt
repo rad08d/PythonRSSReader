@@ -1,0 +1,17 @@
+AUTHORS
+COPYRIGHT
+MANIFEST.in
+NEWS
+NEWS.aptdaemon
+README
+README.tests
+pylintrc
+setup.cfg
+setup.py
+defer/__init__.py
+defer/utils.py
+defer/version.py
+defer.egg-info/PKG-INFO
+defer.egg-info/SOURCES.txt
+defer.egg-info/dependency_links.txt
+defer.egg-info/top_level.txt
