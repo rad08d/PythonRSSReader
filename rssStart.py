@@ -6,9 +6,9 @@ from RssClass import Rss
 
 try:
     dirName = os.path.dirname(__file__)
-    path = dirName + "/rssWebSites.txt"
-    file = open(path)
-    sites = file.readlines()
+    path = os.path.join(dirName,  "rssWebSites.txt")
+    with open(path) as file:
+        sites = file.readlines()
     print len(sites)
     siteStories = []
     for site in sites:
