@@ -17,7 +17,7 @@ class Base:
         self.swindow = gtk.ScrolledWindow()
         self.vbox = gtk.VBox()
         self.dirName = os.path.dirname(__file__)
-        path = self.dirName + "./images/rssReader.jpg"
+        path = os.path.join(self.dirName,  "images/rssReader.jpg")
         self.tree = self.display_data()
         self.selection = self.tree.get_selection()
         self.selection.connect("changed", self.on_selection)
@@ -67,7 +67,7 @@ class Base:
     def display_data(self):
         store = gtk.ListStore(str, str, gobject.TYPE_PYOBJECT)
         try:
-            path = self.dirName + "./rssWebSites.txt"
+            path = os.path.join(self.dirName,  "rssWebSites.txt")
             file = open(path)
             sites = file.readlines()
             siteStories = []
