@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source ./venv/bin/activate
+source venv/bin/activate
 
-./guiclass.py
+python2.7 guiclass.py
