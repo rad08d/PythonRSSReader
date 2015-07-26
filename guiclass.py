@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import gobject
 import os
 from multiprocessing import Process
