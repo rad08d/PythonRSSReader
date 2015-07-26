@@ -1,3 +1,4 @@
 http://9to5google.com/feed/
 http://9to5mac.com/feed/
 http://www.cnet.com/rss/all
+http://www.gizmodo.com/index.xml
