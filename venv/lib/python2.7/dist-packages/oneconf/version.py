@@ -1,4 +1,0 @@
-VERSION='0.3.7'
-CODENAME='trusty'
-DISTRO='Ubuntu'
-RELEASE='14.04'

@@ -1,1 +1,0 @@
-# Public Zeitgeist Python module
